@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BasicGun" format=3 uid="uid://bodjgm87ya1cq"]
+
+[ext_resource type="PackedScene" uid="uid://qqflv6ajbuig" path="res://scenes/default_bullet.tscn" id="1_kx1jr"]
+[ext_resource type="Script" uid="uid://cxn44w836psc6" path="res://scripts/weapons/basic_gun.gd" id="1_qo8jv"]
+
+[resource]
+script = ExtResource("1_qo8jv")
+bullet_scene = ExtResource("1_kx1jr")
+metadata/_custom_type_script = "uid://cxn44w836psc6"

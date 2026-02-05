@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://qqflv6ajbuig"]
+
+[ext_resource type="Texture2D" uid="uid://dprsqrwqe1byj" path="res://assets/sprites/fx/plasma_1.png" id="1_6x1ob"]
+[ext_resource type="Script" uid="uid://slrcfrqvlwdj" path="res://scripts/default_bullet.gd" id="1_8ukc5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ukc5"]
+radius = 3.0
+height = 18.0
+
+[node name="DefaultBullet" type="Area2D" unique_id=1034815260]
+script = ExtResource("1_8ukc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1642920482]
+texture = ExtResource("1_6x1ob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2117809518]
+shape = SubResource("CapsuleShape2D_8ukc5")
