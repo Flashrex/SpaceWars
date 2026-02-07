@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qqflv6ajbuig"]
 
 [ext_resource type="Texture2D" uid="uid://dprsqrwqe1byj" path="res://assets/sprites/fx/plasma_1.png" id="1_6x1ob"]
-[ext_resource type="Script" uid="uid://slrcfrqvlwdj" path="res://scripts/default_bullet.gd" id="1_8ukc5"]
+[ext_resource type="Script" uid="uid://slrcfrqvlwdj" path="res://scripts/scenes/default_bullet.gd" id="1_8ukc5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ukc5"]
 radius = 3.0

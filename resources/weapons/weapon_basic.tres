@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BaseWeapon" format=3 uid="uid://ctic73wlqsi78"]
+
+[ext_resource type="PackedScene" uid="uid://qqflv6ajbuig" path="res://scenes/default_bullet.tscn" id="1_bnt7l"]
+[ext_resource type="Script" uid="uid://bpowgyjencrk0" path="res://scripts/resources/base_weapon.gd" id="2_1f71s"]
+
+[resource]
+script = ExtResource("2_1f71s")
+bullet_scene = ExtResource("1_bnt7l")
+fire_rate = 0.5
+bullet_speed = 600.0
+damage = 1.0
+metadata/_custom_type_script = "uid://bpowgyjencrk0"

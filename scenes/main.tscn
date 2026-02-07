@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://70eam810w3f8"]
 
 [ext_resource type="PackedScene" uid="uid://2mqaxk16wnnb" path="res://scenes/player.tscn" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://ctxkfhk3iwwir" path="res://scripts/scenes/game.gd" id="1_sugp2"]
 [ext_resource type="Texture2D" uid="uid://ckrieh3f7giyo" path="res://assets/sprites/explosions/explosion_1_09.png" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://by2na5jnod5mb" path="res://scenes/enemy.tscn" id="4_jyhfs"]
 
-[node name="Node2D" type="Node2D" unique_id=68541871]
+[node name="Game" type="Node2D" unique_id=68541871]
+script = ExtResource("1_sugp2")
 
 [node name="Player" parent="." unique_id=50225555 instance=ExtResource("1_0wfyh")]
 
@@ -11,4 +14,5 @@
 position = Vector2(-63, -16)
 texture = ExtResource("2_sugp2")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=866486137]
+[node name="Enemy" parent="." unique_id=977790888 instance=ExtResource("4_jyhfs")]
+position = Vector2(763, -394)

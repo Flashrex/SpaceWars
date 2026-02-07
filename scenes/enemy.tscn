@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://by2na5jnod5mb"]
+
+[ext_resource type="PackedScene" uid="uid://cbuy05vyk65uv" path="res://scenes/spaceship.tscn" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://d3i8ak3itdo7i" path="res://scripts/scenes/enemy.gd" id="1_md0e3"]
+
+[node name="Enemy" type="Node2D" unique_id=977790888]
+script = ExtResource("1_md0e3")
+
+[node name="Spaceship" parent="." unique_id=1287941578 instance=ExtResource("1_7p1mj")]

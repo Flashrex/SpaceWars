@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BaseShip" format=3 uid="uid://bkaort7fq5558"]
+
+[ext_resource type="Script" uid="uid://bpxnvmhtxgboi" path="res://scripts/resources/base_ship.gd" id="1_u8xnp"]
+[ext_resource type="Resource" uid="uid://ctic73wlqsi78" path="res://resources/weapons/weapon_basic.tres" id="2_ysuy4"]
+
+[resource]
+script = ExtResource("1_u8xnp")
+max_speed = 400.0
+weapon = ExtResource("2_ysuy4")
+metadata/_custom_type_script = "uid://bpxnvmhtxgboi"

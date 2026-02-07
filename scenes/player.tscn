@@ -1,48 +1,17 @@
 [gd_scene format=3 uid="uid://2mqaxk16wnnb"]
 
-[ext_resource type="Texture2D" uid="uid://cmomxls1lhdpc" path="res://assets/sprites/player/player_b_m.png" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://danng0fwjq4ih" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Script" uid="uid://b8cqwso1k4umy" path="res://scripts/input_component.gd" id="3_qhqgy"]
-[ext_resource type="Script" uid="uid://dl0hkcenf7x1f" path="res://scripts/movement_component.gd" id="4_dqkch"]
-[ext_resource type="Script" uid="uid://nkdhjk1bavq3" path="res://scripts/weapon_component.gd" id="5_qlg0r"]
-[ext_resource type="Script" uid="uid://cxn44w836psc6" path="res://scripts/weapons/basic_gun.gd" id="6_fjrip"]
-[ext_resource type="PackedScene" uid="uid://qqflv6ajbuig" path="res://scenes/default_bullet.tscn" id="7_smehm"]
+[ext_resource type="Script" uid="uid://danng0fwjq4ih" path="res://scripts/scenes/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://cbuy05vyk65uv" path="res://scenes/spaceship.tscn" id="2_g2els"]
+[ext_resource type="Script" uid="uid://b8cqwso1k4umy" path="res://scripts/components/input_component.gd" id="3_qhqgy"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
-radius = 13.0
-height = 50.0
-
-[sub_resource type="Resource" id="Resource_tuyoq"]
-script = ExtResource("6_fjrip")
-bullet_scene = ExtResource("7_smehm")
-cooldown = 0.5
-metadata/_custom_type_script = "uid://cxn44w836psc6"
-
-[node name="Player" type="CharacterBody2D" unique_id=50225555]
+[node name="Player" type="Node2D" unique_id=427537483]
 script = ExtResource("1_g2els")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=905953884]
-texture = ExtResource("1_3vyb7")
+[node name="Spaceship" parent="." unique_id=1287941578 instance=ExtResource("2_g2els")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=583343195]
-position = Vector2(-1, -2)
-shape = SubResource("CapsuleShape2D_g2els")
+[node name="Camera2D" type="Camera2D" parent="Spaceship" unique_id=576283504]
 
-[node name="InputComponent" type="Node" parent="." unique_id=1170269573]
+[node name="InputComponent" type="Node" parent="." unique_id=1401601462]
 unique_name_in_owner = true
 script = ExtResource("3_qhqgy")
 metadata/_custom_type_script = "uid://b8cqwso1k4umy"
-
-[node name="MovementComponent" type="Node" parent="." unique_id=1327637636 node_paths=PackedStringArray("body", "model")]
-unique_name_in_owner = true
-script = ExtResource("4_dqkch")
-body = NodePath("..")
-model = NodePath("../Sprite2D")
-max_speed = 400.0
-metadata/_custom_type_script = "uid://dl0hkcenf7x1f"
-
-[node name="WeaponComponent" type="Node" parent="." unique_id=750309609]
-unique_name_in_owner = true
-script = ExtResource("5_qlg0r")
-weapon = SubResource("Resource_tuyoq")
-metadata/_custom_type_script = "uid://nkdhjk1bavq3"

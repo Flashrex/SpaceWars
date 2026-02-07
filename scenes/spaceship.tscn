@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cbuy05vyk65uv"]
+
+[ext_resource type="Script" uid="uid://ddiwu7h0ityqp" path="res://scripts/scenes/spaceship.gd" id="1_v0rat"]
+[ext_resource type="Resource" uid="uid://bkaort7fq5558" path="res://resources/ships/player_ship_default.tres" id="2_343tk"]
+[ext_resource type="Texture2D" uid="uid://cmomxls1lhdpc" path="res://assets/sprites/player/player_b_m.png" id="2_me4wu"]
+[ext_resource type="Script" uid="uid://dl0hkcenf7x1f" path="res://scripts/components/movement_component.gd" id="3_343tk"]
+[ext_resource type="Script" uid="uid://nkdhjk1bavq3" path="res://scripts/components/weapon_component.gd" id="4_v6qj0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oh6ee"]
+radius = 14.0
+height = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0bxef"]
+radius = 29.017237
+
+[node name="Spaceship" type="CharacterBody2D" unique_id=1287941578]
+script = ExtResource("1_v0rat")
+shipData = ExtResource("2_343tk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1195771888]
+position = Vector2(1, 1)
+texture = ExtResource("2_me4wu")
+
+[node name="MuzzleLeft" type="Marker2D" parent="Sprite2D" unique_id=1694152015]
+position = Vector2(-14, -5)
+
+[node name="MuzzleRight" type="Marker2D" parent="Sprite2D" unique_id=2075538522]
+position = Vector2(11, -5)
+
+[node name="InnerCollision" type="CollisionShape2D" parent="." unique_id=1912609480]
+shape = SubResource("CapsuleShape2D_oh6ee")
+
+[node name="OuterCollision" type="CollisionShape2D" parent="." unique_id=1952479701]
+shape = SubResource("CircleShape2D_0bxef")
+
+[node name="MovementComponent" type="Node" parent="." unique_id=1643598748]
+unique_name_in_owner = true
+script = ExtResource("3_343tk")
+metadata/_custom_type_script = "uid://dl0hkcenf7x1f"
+
+[node name="WeaponComponent" type="Node" parent="." unique_id=268298952]
+unique_name_in_owner = true
+script = ExtResource("4_v6qj0")
+metadata/_custom_type_script = "uid://nkdhjk1bavq3"
